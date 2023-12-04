@@ -11,7 +11,7 @@
     <revision>2.7</revision>
     <changelist>-SNAPSHOT</changelist>
     <gitHubRepo>jenkinsci/oic-auth-plugin</gitHubRepo>
-    <jenkins.version>2.346.1</jenkins.version>
+    <jenkins.version>2.346.3</jenkins.version>
     <spotbugs.failOnError>true</spotbugs.failOnError>
     <spotbugs.effort>Max</spotbugs.effort>
     <configuration-as-code.version>1569.vb_72405b_80249</configuration-as-code.version>
@@ -49,6 +49,17 @@
       <url>https://opensource.org/licenses/MIT</url>
     </license>
   </licenses>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>io.jenkins.tools.bom</groupId>
+        <artifactId>bom-2.346.x</artifactId>
+        <version>1763.v092b_8980a_f5e</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
   <dependencies>
     <!-- see build plugin unpack -->
     <dependency>
@@ -69,7 +80,6 @@
     <dependency>
       <groupId>org.jenkins-ci.plugins</groupId>
       <artifactId>mailer</artifactId>
-      <version>1.34.2</version>
     </dependency>
 
     <dependency>
@@ -87,7 +97,6 @@
     <dependency>
       <groupId>io.jenkins.configuration-as-code</groupId>
       <artifactId>test-harness</artifactId>
-      <version>${configuration-as-code.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
